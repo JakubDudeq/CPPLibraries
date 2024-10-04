@@ -22,6 +22,10 @@ public:
 		clear();
 	}
 
+	bool compare(var a, var b) const {
+        return a < b;
+    }
+
 	void append(var x) {
 		Node* node = new Node;
 		node->element = x;
