@@ -1,6 +1,8 @@
 #ifndef BETTERCOUT_H
 #define BETTERCOUT_H
 
+#include <iostream>
+
 using namespace std;
 
 template <typename T>
