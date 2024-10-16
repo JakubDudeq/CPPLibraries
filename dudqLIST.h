@@ -16,7 +16,7 @@ private:
 public:
 	int length = 0;
 
-	List() : start(nullptr) {}
+	List() : start(NULL) {}
 
 	~List() {
 		clear();
@@ -29,15 +29,15 @@ public:
 	void append(var x) {
 		Node* node = new Node;
 		node->element = x;
-		node->next = nullptr;
+		node->next = NULL;
 		length++;
 
-		if (start == nullptr) {
+		if (start == NULL) {
 			start = node;
 		}
 		else {
 			Node* current = start;
-			while (current->next != nullptr) {
+			while (current->next != NULL) {
 				current = current->next;
 			}
 			current->next = node;
@@ -56,7 +56,7 @@ public:
 		Node* current = start;
 		int i = 0;
 		cout << "[" << endl;
-		while (current != nullptr) {
+		while (current != NULL) {
 			cout << " [" << i++ << "] => [" << current->element << "]" << endl;
 			current = current->next;
 		}
@@ -78,7 +78,7 @@ public:
 		int i = 0;
 		Node* current = start;
 
-		while (current != nullptr) {
+		while (current != NULL) {
 			if (current->element == x) {
 				return i;
 			}
@@ -90,13 +90,13 @@ public:
 
 	void clear() {
 		Node* current = start;
-		Node* nextNode = nullptr;
-		while (current != nullptr) {
+		Node* nextNode = NULL;
+		while (current != NULL) {
 			nextNode = current->next;
 			delete current;
 			current = nextNode;
 		}
-		start = nullptr;
+		start = NULL;
 		length = 0;
 	}
 
@@ -114,7 +114,7 @@ public:
 			return;
 		}
 
-		Node* prev = nullptr;
+		Node* prev = NULL;
 		for (int i = 0; i < x; i++) {
 			prev = current;
 			current = current->next;
@@ -145,7 +145,7 @@ public:
 		if (!head || !head->next) {return head;}
 		Node* middle = getMiddle(head);
 		Node* halfList = middle->next;
-		middle->next = nullptr;
+		middle->next = NULL;
 		Node* left = mergeSort(head);
 		Node* right = mergeSort(halfList);
 		return merge(left, right);
@@ -153,7 +153,7 @@ public:
 		Node* merge(Node* left, Node* right) {
 		if (!left) return right;
 		if (!right) return left;
-		Node* result = nullptr;
+		Node* result = NULL;
 		if (compare(left->element, right->element)) {result = right; result->next = merge(left, right->next);}
 		else {result = left; result->next = merge(left->next, right);}
 		return result;
@@ -170,14 +170,14 @@ public:
 	}
 
 	var max() {
-		if (start == nullptr) {
+		if (start == NULL) {
 			throw runtime_error("List is empty");
 		}
 
 		Node* current = start;
 		var maxElement = current->element;
 
-		while (current != nullptr) {
+		while (current != NULL) {
 			if (compare(current->element, maxElement)) {
 				maxElement = current->element;
 			}
@@ -187,14 +187,14 @@ public:
 	}
 
 	var low() {
-		if (start == nullptr) {
+		if (start == NULL) {
 			throw runtime_error("List is empty");
 		}
 
 		Node* current = start;
 		var minElement = current->element;
 
-		while (current != nullptr) {
+		while (current != NULL) {
 			if (compare(minElement, current->element)) {
 				minElement = current->element;
 			}
@@ -203,12 +203,14 @@ public:
 		return minElement;
 	}
 };
-
 #endif // BETTERLIST_H
 
 /*
 	/// Dokumentacja
-
+	
+	By aktywowaæ nale¿y daæ plik dudqLIST.h do tego samego folderu co kod Ÿród³owy i napisaæ
+	#include "dudqLIST.h"
+	
 
 	List<type> listName;
 	Tworzenie nowej pustej listy

@@ -42,6 +42,12 @@ void enout(const T& first, const Args&... args) {
 /*
 	/// Dokumentacja
 	
+		
+	By aktywowaæ nale¿y daæ plik dudqCOUT.h do tego samego folderu co kod Ÿród³owy i napisaæ
+	#include "dudqCOUT.h"
+	
+	
+	
     out(a, a, a...);
     Wypisuje wszystkie podane wartoœci ko³o siebiê w konsoli i koñczy siê endl-inem
     a (any) - wartoœæ do wypisania, iloœæ podanych argumentów jest dowolna
