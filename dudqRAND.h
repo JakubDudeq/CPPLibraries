@@ -76,33 +76,33 @@ public:
 
 	/// Dokumentacja
 
-	UShort(int a, int b)
+	(unsigned short) UShort(int a, int b);
 	zwraca losowo wygenerowan¹ liczbê typu unsigned Byte
 	a (int) - dolny zakres losowania - musi nale¿eæ do <0,inf>
 	b (int) - górny zakres losowania
 
-	Short(int a, int b)
+	(short) Short(int a, int b)
 	zwraca losowo wygenerowan¹ liczbê typu Short
 	a (int) - dolny zakres losowania
 	b (int) - górny zakres losowania
 
-	UInt(int a, int b)
+	(unsigned int) UInt(int a, int b);
 	zwraca losowo wygenerowan¹ liczbê typu unsigned Int
 	a (int) - dolny zakres losowania - musi nale¿eæ do <0,inf>
 	b (int) - górny zakres losowania
 
-	Int(int a, int b)
+	(int) Int(int a, int b);
 	zwraca losowo wygenerowan¹ liczbê typu Int
 	a (int) - dolny zakres losowania
 	b (int) - górny zakres losowania
 
-	Float(var a, var b, int c)
+	(float) Float(var a, var b, int c);
 	zwraca losowo wygenerowan¹ liczbê typu Byte
 	a (numeric) - dolny zakres losowania - a i b musz¹ byæ tego samego typu
 	b (numeric) - górny zakres losowania
 	c (int) - liczba miejsc po przecinku - musi nale¿eæ do <1,4>        /// bo nie wiem jak zrobiæ wiêcej...
 
-	Double(var a, var b, int c)
+	(double) Double(var a, var b, int c);
 	zwraca losowo wygenerowan¹ liczbê typu Double
 	a (numeric) - dolny zakres losowania - a i b musz¹ byæ tego samego typu
 	b (numeric) - górny zakres losowania
