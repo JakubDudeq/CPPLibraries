@@ -48,6 +48,20 @@ public:
         double _b = double(b);
         return std::pow(_x, (_a / _b));
     }
+    template <typename var>
+    static double floor(var x) {
+        return std::floor(static_cast<double>(x));
+    }
+
+    template <typename var>
+    static double ceil(var x) {
+        return std::ceil(static_cast<double>(x));
+    }
+
+    template <typename var>
+    static double round(var x) {
+        return std::round(static_cast<double>(x));
+    }
 };
 
 #endif // BETTERMATH_H
@@ -78,5 +92,17 @@ public:
     a (numeric)
     b (integer)
     c (integer)
+
+    (double) Math::floor(var a);
+    Zwraca przybli¿enie do caloœci z liczby a
+    a (numeric)
+
+    (double) Math::ceil(var a);
+    Zwraca przybli¿enie do caloœci w dó³ z liczby a
+    a (numeric)
+
+    (double) Math::round(var a);
+    Zwraca przybli¿enie do caloœci w górê z liczby a
+    a (numeric)
 
 */
